@@ -24,13 +24,13 @@ class SubmissionServiceImplTest {
     @BeforeEach
     void setUp() {
         // Submission Request
-        submissionRequest.setName("raj");
+        submissionRequest.setName("niha");
         submissionRequest.setRate(90);
         submissionRequest.setVendor("TCS");
         submissionRequest.setImplementation("Wipro");
         submissionRequest.setTech("Java");
         submissionRequest.setLead("Sagar");
-        submissionRequest.setVendorEmail("raj@gmail.com");
+        submissionRequest.setVendorEmail("niha@gmail.com");
         submissionRequest.setStatus(Status.OFFERED);
 
         submissionService=new SubmissionServiceImpl();
@@ -91,8 +91,8 @@ class SubmissionServiceImplTest {
         updateSubmissionRequest.setVendor("DNT");
         updateSubmissionRequest.setImplementation("DNT Group");
         updateSubmissionRequest.setTech("Java");
-        updateSubmissionRequest.setLead("raj");
-        updateSubmissionRequest.setVendorEmail("raj.info@gmail.com");
+        updateSubmissionRequest.setLead("niha");
+        updateSubmissionRequest.setVendorEmail("niha.info@gmail.com");
         updateSubmissionRequest.setStatus(Status.OFFERED);
 
         Submission submissionActual=submissionService.updateSubmissionBySerialId(submissionCreated.getSerialNumber(),updateSubmissionRequest);
