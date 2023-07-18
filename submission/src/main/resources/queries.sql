@@ -1,7 +1,8 @@
 create schema Monday;
 use Monday;
 create table Employee (
-	first_name varchar(30),
+    id INTEGER PRIMARY KEY,
+    first_name varchar(30),
     last_name varchar(30),
     job_start_date date,
     salary float(10),
