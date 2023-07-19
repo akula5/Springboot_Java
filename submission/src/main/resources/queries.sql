@@ -99,7 +99,7 @@ FROM consultant_details JOIN submission ON (consultant_details.consultant_id = s
 -- 4. Write a SQL to find total number of submissions for each constulant by each submission day
 SELECT consultant_details.consultant_id,consultant_details.first_name AS consultant_first_name, consultant_details.last_name AS consultant_last_name,
 count(*) AS total_submission,submission.submission_date
-FROM consultant_details JOIN submission ON (consultant_details.consultant_id = submission.consultant_id) GROUP BY consultant_details.consultant_id,submission.submission_date;
+FROM consultant_details LEFT JOIN submission ON (consultant_details.consultant_id = submission.consultant_id) GROUP BY consultant_details.consultant_id,submission.submission_date;
 
 
 -- 5. write a SQL to delete all submissions where "rate" is null
